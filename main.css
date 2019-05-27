@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+body {
+	background: url("background4.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-family: 'Dancing Script', cursive; 
+	font-size: 320%;
+	padding: 30px 0;
+}
+
+
+.container {
+	background-color: rgba(255,255,255, .5);
+	width: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 20px;
+	resize: both;
+	overflow: auto;
+	text-align: center;
+}
+
+.form-group {
+	padding: 10px;
+}
+
+.btn {
+	margin: 10px;
+}
+.hidden {
+	display: none;
+}
+
+.form-group {
+	margin-bottom: 0;
+}
+
+.password, .email { 
+	margin: auto;
+	width: 60%;
+
+}
+.alert {
+	margin-bottom: 0;
+}
+
+.check {
+	margin-top: 0.45rem;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.container2 {
+	margin: 50px auto;
+	width: 70%;
+	height: auto;
+	background-color: rgba(255,255,255, .5);
+	text-align: center;
+	border-radius: .25rem;
+}
+
+.container2 h1 {
+	padding-bottom: 15px;
+}
+textarea {
+  resize: none;
+  height: 200px;
+  border-top: none !important;
+}
+#form-header{
+	width: 100%;
+	height: 40px;
+	background-color: rgba(211,211,211, .5);
+	border: 1px solid #ced4da;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom: none;
+}
+
+#date-div{
+	float: left;
+}
+#old-new-div{
+	float: right;
+}
+.date-field{
+	width: 8em !important;
+	height: 2em;
+	margin: auto 0;
+	margin-top: 3px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.old-new, .go, .today {
+	margin: 0;
+	margin-top: 3px;
+	font-weight: 600;
+	padding: 2px;
+}
+
+.old-new{
+	padding: 2px 4px;
+	
+}
+
+#topbar {
+	background-color: lightblue;
+	width: 100%;
+	height: 35px;
+}
+
+#logout {
+    padding: 2px 5px;
+	border: solid 1px #007bff;
+	border-radius:.25em;
+    text-align: center;
+    font-size: 15px;
+	margin-top: 3px;
+}
+
+#message {
+	width: 55%;
+	margin: 5px auto;
+	
+}
+
+
