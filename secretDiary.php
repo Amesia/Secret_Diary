@@ -36,7 +36,7 @@
 	<body>
 		<div id="topbar" class="container-fluid">
 				<div class="float-left d-inline" id="login">This Version of Secret Diary only works correctly in Internet Explorer for now.... </div>
-				<div class="float-right d-inline" id="logout"><?php echo $login; ?>   <?php echo $logout; ?></div>
+				<div class="float-right d-inline" id="logout"><?php echo $logout; ?></div>
 		</div>
 		<div class="container2">
 		<h1>My Secret Diary</h1>
@@ -119,7 +119,7 @@
 						});
 					}
 
-				$( "#textarea" ).keyup(function() {
+				$( "#textarea" ).bind('input propertychange', function() {
 					var diary = $("#textarea").val();
 					var id="<?php echo $_SESSION['id'];?>";   
 					var date =$("#date").val();
