@@ -37,7 +37,7 @@ h1 {
 .btn {
 	margin: 10px;
 }
-.hidden {
+#signInForm {
 	display: none;
 }
 

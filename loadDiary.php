@@ -16,16 +16,16 @@
 					while ($row = mysqli_fetch_array($result)){
 						$data["diary"] = $row['diary'];
 						$data["date"] = $row['date'];
-						$data["message"] = '<div class="alert alert-success" role="alert">Successfully loaded data from database '.$_POST['action'].'</div>';
+						$data["message"] = '<div class="alert alert-success" role="alert">Successfully loaded data from database</div>';
 					}
 					
 				} else if (mysqli_num_rows ($result) == 0){
 					$data["diary"] = null;
 					$data["date"] = mysqli_real_escape_string($link, $_POST['date']);
 					if ($data["date"] == date('Y-m-d')) {
-						$data["message"] = '<div class="alert alert-light" role="alert">Ready to add a new diary? '. $_POST['action'].'</div>';
+						$data["message"] = '<div class="alert alert-light" role="alert">Ready to add a new diary?</div>';
 					} else {
-						$data["message"] = '<div class="alert alert-secondary" role="alert">No diaries found on that date '. $_POST['action'].'</div>';
+						$data["message"] = '<div class="alert alert-secondary" role="alert">No diaries found on that date</div>';
 					}
 				} else {
 					$data["message"] = '<div class="alert alert-warning" role="alert">Error in database: To many diaries found</div>';
@@ -40,13 +40,13 @@
 					while ($row = mysqli_fetch_array($result)){
 						$data["diary"] = $row['diary'];
 						$data["date"] = $row['date'];
-						$data["message"] = '<div class="alert alert-success" role="alert">Successfully loaded data from database '.$_POST['action'].'</div>';
+						$data["message"] = '<div class="alert alert-success" role="alert">Successfully loaded data from database</div>';
 					}
 					
 				} else if (mysqli_num_rows ($result) == 0){
 					$data["diary"] = null;
 					$data["date"] = mysqli_real_escape_string($link, $_POST['date']);
-					$data["message"] = '<div class="alert alert-secondary" role="alert">No older diaries found'. $_POST['action']. '</div>';
+					$data["message"] = '<div class="alert alert-secondary" role="alert">No older diaries found</div>';
 				}
 				
 			} else if ($_POST['action'] == 'next') {
@@ -58,13 +58,13 @@
 					while ($row = mysqli_fetch_array($result)){
 						$data["diary"] = $row['diary'];
 						$data["date"] = $row['date'];
-						$data["message"] = '<div class="alert alert-success" role="alert">Successfully loaded data from database '.$_POST['action'].'</div>';
+						$data["message"] = '<div class="alert alert-success" role="alert">Successfully loaded data from database</div>';
 					}
 					
 				} else if (mysqli_num_rows ($result) == 0){
 					$data["diary"] = null;
 					$data["date"] = date('Y-m-d');
-					$data["message"] = '<div class="alert alert-secondary" role="alert">No newer diaries found'. $_POST['action'].'</div>';
+					$data["message"] = '<div class="alert alert-secondary" role="alert">No newer diaries found</div>';
 				}
 			
 			} else {

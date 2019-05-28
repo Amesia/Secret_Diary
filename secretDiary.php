@@ -82,7 +82,6 @@
 					function loadDiary(action) { 
 						var id = <?php echo $_SESSION['id'];?>;
 						var date = $("#date").val();
-						$('#textarea').html('');
 						$.ajax({
 							url:'loadDiary.php',
 							method:'POST',
@@ -96,25 +95,25 @@
 						}).done(function(data){
 								$('#message').html(data.message);
 								$('#date').val(data.date);
-								$('#textarea').html(data.diary);
-								alert("onload finished" + data.diary); 
+								$('#textarea').val(data.diary);
+								
 								if (data.isNext) {
 									$(".next").removeClass('disabled');
 									$(".next").attr("disabled", false);
-									//alert ("removed class disabled to next");
+									
 								} else {
 									$(".next").addClass('disabled');
 									$(".next").attr("disabled", true);
-									//alert ("added class disabled to next");
+									
 								}
 								if (data.isPrevious) {
 									$(".previous").removeClass('disabled');
 									$(".previous").attr("disabled", false);
-									//alert ("removed class disabled to previous");
+									
 								} else {
 									$(".previous").addClass('disabled');
 									$(".previous").attr("disabled", true);
-									//alert ("added class disabled to previous");
+								
 								}
 						});
 					}
