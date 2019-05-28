@@ -104,11 +104,12 @@
 					<input type="checkbox" name="stay_logged_in" value="1" class="form-check-input check" id="Check1">
 				</div>
 				<input type="submit" name="signup" value="Sign Up" class="btn btn-primary">
+				<button type="button" class="btn btn-link switch">Log in</button>
 			</form>
 			<form id="signInForm" method="post" class="hidden"> <!-- Sign in form-->
 				<div class="form-group">
-					<label for="email1" class="sr-only">Email address</label>
-					<input type="email" name="email" placeholder="Your email" id="email1" class="form-control email" aria-describedby="emailHelp">
+					<label for="email2" class="sr-only">Email address</label>
+					<input type="email" name="email" placeholder="Your email" id="email2" class="form-control email" aria-describedby="emailHelp">
 					<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 				</div>
 				<div class="form-group">
@@ -119,24 +120,18 @@
 					<label class="form-check-label" for="Check2">Keep me logged in</label>
 					<input type="checkbox" name="stay_logged_in" value="1" class="form-check-input check" id="Check2">
 				</div>
-				<input type="submit" name="signin" value="Sign In" class="btn btn-primary">
+				<input type="submit" name="signin" value="Log In" class="btn btn-primary">
+				<button type="button" class="btn btn-link switch">Sign Up</button>
 			</form>
 			<div id="error"><?php echo $error; ?></div>
-			<button type="button" id="switch" class="btn btn-link">Sign in</button>
+			
 		</div>
 		
 		<script type="text/javascript">
-			<!-- Switch function -->
-			$("#switch").click(function(){
-				if ($("#signUpForm").hasClass("hidden")) {
-					$("#signInForm").addClass("hidden");
-					$("#signUpForm").removeClass("hidden");
-					$("#switch").html("Sign In");
-				} else {
-					$("#signUpForm").addClass("hidden");
-					$("#signInForm").removeClass("hidden");
-					$("#switch").html("Sign Up");
-				}
+			// Switch function
+			$(".switch").click(function(){
+				$("#signInForm").toggle();
+				$("#signUpForm").toggle();
 			});
 		</script>
 		<!-- Optional JavaScript -->
