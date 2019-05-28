@@ -30,8 +30,9 @@
 			$data["message"] = '<div class="alert alert-warning" role="alert">Error not sure what to do</div>';
 		}
 
-		echo json_encode($data);
 	} else {
-		echo "data failure";
+		$data["message"] = '<div class="alert alert-warning" role="alert">data failure</div>';
 	}
+	
+	echo json_encode($data);
 ?>
